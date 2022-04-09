@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/scss/bootstrap";
+body {
+    font-family: 'Overpass', sans-serif;
+    font-style: normal;
+    background-color: #fafafa;
+    background: url("./assets/images/bg-dots.svg");
+    background-size: 50%;
+    background-position: 100% 230px;
+    background-repeat: no-repeat;
+}

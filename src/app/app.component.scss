@@ -1,0 +1,232 @@
+// ***************** Comman styles starts ****************** 
+$base-color: #51189A;
+$blue-color: #00B6FF;
+$color-gray: #4A4A4A;
+.base__color {
+    color: $base-color;
+}
+
+.bg__base__color {
+    background-color: $base-color;
+}
+
+.blue__color {
+    color: $blue-color;
+}
+
+.bg__blue__color {
+    background-color: $blue-color;
+}
+
+body {
+    background: url("../assets/images/bg-dots.svg");
+    background-size: contain;
+    background-position: 100% 230px;
+    background-repeat: no-repeat;
+}
+
+// ***************** Comman styles ends ****************** 
+// #header starts 
+#header {
+    nav {
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+        padding: 10px 0 6px;
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 18px;
+        }
+        // navbar-brand
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    color: $blue-color;
+                    font-size: 13px;
+                    opacity: 0.5;
+                    &.active,
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+                // .nav-link
+            }
+            // nav-item
+        }
+        // navbar-nav
+    }
+    // nav 
+}
+
+// #header ends 
+// footer starts 
+#footer {
+    background: #222222;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+// footer ends 
+// ********************** login__page__content starts ***********************
+.login__page__content {
+    padding-top: 80px;
+    .left__side__content {
+        .already__partner__title {
+            .title {
+                color: $color-gray;
+                font-weight: 700;
+                font-size: 50px;
+                line-height: 76px;
+                margin-bottom: 30px;
+            }
+            // title
+        }
+        // already__partner__title
+        .left__side__descp {
+            .descp {
+                font-weight: 400;
+                font-size: 13px;
+                color: #454545;
+            }
+            // descp
+        }
+        // left__side__descp
+    }
+    // left__side__content
+    .right__side__content {
+        height: 100%;
+        background: #FFFFFF;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+        .sign__in__card {
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 2.1fr;
+            .register__title,
+            .sign__in__title {
+                .title {
+                    font-weight: 600;
+                    font-size: 22px;
+                    line-height: 38px;
+                    color: #4A4A4A;
+                }
+                // title
+            }
+            // register__title
+            .card__right__side {
+                .sign__in__form {
+                    form {
+                        .form-control {
+                            border: 0;
+                            background: transparent;
+                            border-bottom: 1px solid #fff;
+                            border-radius: 0;
+                            padding: 0;
+                            color: #fff;
+                            box-shadow: none;
+                            font-size: 10px;
+                            line-height: 0;
+                            margin-top: 4px;
+                            &::placeholder {
+                                color: #fff;
+                            }
+                        }
+                        // form-control
+                    }
+                }
+                // sign__in__form
+            }
+            // card__right__side
+            .card__left__side,
+            .card__right__side {
+                padding: 40px 35px;
+            }
+            .sign__in__bottom {
+                padding-top: 15px;
+                .forgot__password {
+                    .descp {
+                        font-weight: 300;
+                        font-size: 10px;
+                        line-height: 20px;
+                        color: rgba(255, 255, 255, 0.5);
+                        cursor: pointer;
+                        &:hover {
+                            color: #fff;
+                        }
+                    }
+                    // descp
+                }
+                // forgot__password.
+                .login__button {
+                    .btn {
+                        background: #00B6FF;
+                        width: 90px;
+                        border-radius: 0;
+                        color: #fff;
+                        padding-top: 7px;
+                        font-size: 10px;
+                        &:hover {
+                            color: #00B6FF;
+                            background-color: #fff;
+                        }
+                    }
+                    // btn
+                }
+                // login__button
+            }
+            // sign__in__bottom
+        }
+        // .sign__in__card
+    }
+    // .right__side__content
+}
+
+// login__page__content
+// ********************** login__page__content ends ***********************
+@media screen and (max-width:768px) {
+    .login__page__content {
+        padding-top: 40px;
+        .right__side__content {
+            .sign__in__card {
+                grid-template-columns: auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:479px) {
+    .login__page__content {
+        padding-top: 20px;
+        padding-bottom: 45px;
+        .left__side__content {
+            .already__partner__title {
+                .title {
+                    font-size: 34px;
+                    line-height: normal;
+                    margin-bottom: 10px;
+                }
+            }
+            .left__side__descp {
+                .descp {
+                    font-size: 12px;
+                }
+            }
+        }
+        .right__side__content {
+            .sign__in__card {
+                grid-template-columns: auto;
+                .card__left__side,
+                .card__right__side {
+                    padding: 15px 20px;
+                }
+            }
+        }
+    }
+    #footer {
+        font-size: 10px;
+    }
+    .navbar-toggler {
+        background-color: #51189a;
+        border: 1px solid #51189a;
+    }
+}
